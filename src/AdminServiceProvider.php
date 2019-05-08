@@ -37,6 +37,7 @@ class AdminServiceProvider extends ServiceProvider
             return new Packagetest($app['session'], $app['config']);
         });
     }
+
     /**
      * Get the services provided by the provider.
      *

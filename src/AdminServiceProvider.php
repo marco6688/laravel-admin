@@ -20,9 +20,9 @@ class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/eadmin.php' => config_path('eadmin.php'), // 发布配置文件到 laravel 的config 下
+            __DIR__.'/config/admin.php' => config_path('admin.php'), // 发布配置文件到 laravel 的config 下
         ]);
-        $this->loadRoutesFrom(__DIR__."/router/web.php");
+        $this->loadRoutesFrom(__DIR__."/config/web.php");
     }
     /**
      * Register the application services.
@@ -31,10 +31,6 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // 单例绑定服务
-//        $this->app->singleton('packagetest', function ($app) {
-//            return new Packagetest($app['session'], $app['config']);
-//        });
         $this->mergeConfigFrom(__DIR__."/config/eadmin.php","eadmin");
 
     }

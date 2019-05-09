@@ -6,7 +6,13 @@
             "email": "18516066415@163.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "~5.5",
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0 || ~8.0",
+    },
     "autoload": {
         "psr-4": {
             "Easy\\Admin\\": "src/"

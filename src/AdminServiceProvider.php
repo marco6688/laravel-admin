@@ -39,14 +39,4 @@ class AdminServiceProvider extends ServiceProvider
 
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        // 因为延迟加载 所以要定义 provides 函数 具体参考laravel 文档
-//        return ['packagetest'];
-    }
 }
